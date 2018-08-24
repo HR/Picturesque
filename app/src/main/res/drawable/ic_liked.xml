@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/ic_liked_selected"
+        android:state_selected="true"/>
+    <item
+        android:drawable="@drawable/ic_liked_unselected"
+        android:state_selected="false"/>
+</selector>

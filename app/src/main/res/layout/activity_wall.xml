@@ -1,0 +1,77 @@
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="co.sahr.android.picturesque.WallActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <com.github.piasy.biv.view.BigImageView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        app:customSsivId="@+id/wall_SSIV"
+        app:initScaleType="centerInside">
+
+        <co.sahr.android.picturesque.ui.WallSubsamplingScaleImageView
+            android:id="@+id/wall_SSIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.github.piasy.biv.view.BigImageView>
+    <!--  This FrameLayout insets its children based on system windows using
+                  android:fitsSystemWindows. Because CoordinatorLayout adds a top
+                  padding so that content is drawn below the status bar and they don't overlap
+                  See https://stackoverflow.com/questions/34761671/translucent-transparent-status-bar-coordinatorlayout-toolbar-fragment -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+        <!--  CoordinatorLayout makes sure the snackbar anchors itself in it instead of the
+             full content view i.e. the root FrameLayout / BigImageView -->
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/fullscreen_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <View
+                android:id="@+id/v_top_vignette"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wall_vignette_size"
+                android:layout_gravity="top"
+                android:background="@drawable/top_vignette"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <LinearLayout
+                android:id="@+id/fullscreen_content_controls_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|end"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/fullscreen_content_controls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--Controls frags go here-->
+                </LinearLayout>
+                <!--AdView goes here-->
+            </LinearLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </FrameLayout>
+</FrameLayout>

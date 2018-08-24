@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<resources>
+    <string-array name="wall_categories">
+        <item>Home screen</item>
+        <item>Lock screen</item>
+        <item>Both</item>
+    </string-array>
+    <string-array name="sort_choices">
+        <item>Most Recent</item>
+        <item>Most Popular</item>
+    </string-array>
+
+</resources>

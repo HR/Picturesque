@@ -1,0 +1,23 @@
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/fl_set_wall_button"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="bottom"
+             android:background="@color/vignette_overlay"
+             tools:context="co.sahr.android.picturesque.fragments.wall.SetWallControlFragment">
+
+    <TextView
+        android:id="@+id/tv_set_wall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:padding="@dimen/set_wall_text_padding"
+        android:text="@string/action_button_set_wall"
+        android:textAlignment="center"/>
+
+</FrameLayout>

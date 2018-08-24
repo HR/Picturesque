@@ -1,0 +1,35 @@
+<!--clickable set to true to prevent clicks from reaching the bottom recycler layout-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fallback_linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/primary"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_sad_cloud"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message_load_error"
+        android:textSize="@dimen/fallback_layout_text_size"/>
+
+    <!--Click button triggers {@link BaseFragment.reload}-->
+    <Button
+        android:id="@+id/retry_load"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fallback_layout_button_margin_t"
+        android:text="@string/action_button_retry_load"/>
+
+</LinearLayout>

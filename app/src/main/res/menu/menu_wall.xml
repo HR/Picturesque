@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Share -->
+    <!--<item-->
+        <!--android:id="@+id/action_share"-->
+        <!--android:icon="@drawable/ic_share"-->
+        <!--android:title="@string/action_share"-->
+        <!--android:actionProviderClass="android.widget.ShareActionProvider"-->
+        <!--app:showAsAction="always"/>-->
+    <item
+        android:id="@+id/action_report"
+        android:title="@string/action_report"
+        app:showAsAction="never"/>
+</menu>

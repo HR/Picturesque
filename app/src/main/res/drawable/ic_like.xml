@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/ic_unliked"
+        android:minLevel="0"/>
+    <item
+        android:drawable="@drawable/ic_liked_selected"
+        android:maxLevel="1"/>
+</level-list>

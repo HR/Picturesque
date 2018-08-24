@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<co.sahr.android.picturesque.ui.SquareFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/wall_grid_margin"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:gravity="center">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_wall_thumb"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/temp_background"
+        android:scaleType="centerCrop"
+        fresco:failureImage="@drawable/app_wall_fail"
+        fresco:failureImageScaleType="fitCenter"
+        fresco:placeholderImage="@drawable/app_wall_temp"
+        fresco:placeholderImageScaleType="fitCenter"/>
+
+    <RelativeLayout
+        android:id="@+id/wall_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="@dimen/wall_label_margin_tr"
+        android:layout_marginTop="@dimen/wall_label_margin_tr"
+        android:background="@drawable/wall_label"
+        android:gravity="center"
+        android:padding="@dimen/wall_label_padding"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_wall_label"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            fresco:srcCompat="@drawable/ic_premium_selected"/>
+
+        <TextView
+            android:id="@+id/tv_wall_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_wall_label"
+            android:textSize="@dimen/wall_label_text_size"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</co.sahr.android.picturesque.ui.SquareFrameLayout>

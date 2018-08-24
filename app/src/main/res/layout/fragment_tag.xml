@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/tag_grid_margin"
+              android:orientation="vertical">
+
+    <co.sahr.android.picturesque.ui.SquareFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_tag_thumb"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/temp_background"
+            android:scaleType="centerCrop"
+            fresco:failureImage="@drawable/app_wall_fail"
+            fresco:failureImageScaleType="fitCenter"
+            fresco:placeholderImage="@drawable/app_wall_temp"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:roundedCornerRadius="@dimen/tag_thumb_corner_radius"
+            />
+    </co.sahr.android.picturesque.ui.SquareFrameLayout>
+
+    <TextView
+        android:id="@+id/tv_tag_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="@dimen/tag_grid_text_margin_bottom"
+        android:layout_marginTop="@dimen/tag_grid_text_margin_top"
+        android:textColor="@color/accent"
+        android:textSize="@dimen/tag_grid_text_size"/>
+</LinearLayout>

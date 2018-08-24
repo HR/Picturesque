@@ -1,0 +1,86 @@
+/*
+ * Copyright (C) Habib Rehman (git.io/HR) 2018
+ */
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.firebase-perf'
+
+repositories {
+    maven { url "http://dl.bintray.com/piasy/maven" }
+}
+
+android {
+    compileSdkVersion rootProject.ext.androidCompileSdkVersion
+    buildToolsVersion rootProject.ext.androidBuildToolsVersion
+    defaultConfig {
+        applicationId rootProject.ext.releaseApplicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.releaseVersionCode
+        versionName rootProject.ext.releaseVersionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+    }
+    buildTypes {
+        // MUST increment the db version to ensure onUpgrade called when db schema is changed
+        // Increment db version with the release version (code)
+        debug {
+            buildConfigField "String", "BASE_URL", "\"YOUR HOSTNAME\""
+            buildConfigField "int", "DATABASE_VERSION", "$rootProject.ext.releaseVersionCode"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    // Build all jar file in libs dir
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    // Android support libs
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.androidSupportSdkVersion"
+    implementation "com.android.support:preference-v7:$rootProject.ext.androidSupportSdkVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.ext.androidSupportSdkVersion"
+    implementation "com.android.support:design:$rootProject.ext.androidSupportSdkVersion"
+    implementation "com.android.support:support-v4:$rootProject.ext.androidSupportSdkVersion"
+    implementation "com.android.support:support-vector-drawable:$rootProject.ext.androidSupportSdkVersion"
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.ext.androidConstraintLayoutVersion"
+    implementation "com.android.support:support-core-utils:$rootProject.ext.androidSupportSdkVersion"
+
+    // Firebase & Ads
+    implementation "com.google.android.gms:play-services-ads:$rootProject.ext.playServicesVersion"
+    implementation "com.google.firebase:firebase-ads:15.0.1"
+    implementation "com.google.firebase:firebase-core:$rootProject.ext.firebaseVersion"
+    implementation "com.google.firebase:firebase-perf:16.1.0"
+
+    // Fresco
+    implementation "com.facebook.fresco:fresco:$rootProject.ext.frescoVersion"
+    // Add WebP support to Fresco, without animations
+    implementation "com.facebook.fresco:webpsupport:$rootProject.ext.frescoVersion"
+
+    // BigImageViewer
+    implementation "com.github.piasy:BigImageViewer:$rootProject.ext.bigImageViewerVersion"
+    // Add fresco support to BigImageViewer
+    implementation "com.github.piasy:FrescoImageLoader:$rootProject.ext.bigImageViewerVersion"
+
+    // Retrofit & OkHttp
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okHTTPLoggerVersion"
+    // JSON Marshalling
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+
+    // ReactiveX
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.ext.RxAndroidVersion"
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.ext.RxJavaVersion"
+
+    // Utils
+    api "com.google.guava:guava:$rootProject.ext.guavaVersion"
+}
+
+apply plugin: 'com.google.gms.google-services'

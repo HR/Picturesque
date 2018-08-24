@@ -1,0 +1,47 @@
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="shortcut_ic_padding">10dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <!--Default Material design dimens-->
+    <dimen name="md_dialog_content_padding">24dp</dimen>
+    <dimen name="md_dialog_content_padding_top">20dp</dimen>
+    <!--WallActivity-->
+    <dimen name="wall_grid_margin">1dp</dimen>
+    <dimen name="wall_tag_padding">2dp</dimen>
+    <dimen name="control_ic_margin_bottom">15dp</dimen>
+    <dimen name="control_ic_padding">10dp</dimen>
+    <dimen name="control_ic_size">30dp</dimen>
+    <dimen name="wall_vignette_size">120dp</dimen>
+    <dimen name="info_left_bottom_padding">15dp</dimen>
+    <dimen name="set_wall_text_padding">15dp</dimen>
+    <dimen name="like_margin_bottom">10dp</dimen>
+    <!--Tags tab-->
+    <dimen name="tag_grid_margin">10dp</dimen>
+    <dimen name="tag_grid_text_size">15sp</dimen>
+    <dimen name="tag_grid_text_margin_top">8dp</dimen>
+    <dimen name="tag_thumb_corner_radius">3dp</dimen>
+    <dimen name="tag_grid_text_margin_bottom">2dp</dimen>
+    <!--Unlock wall dialog-->
+    <dimen name="unlock_wall_dialog_option_text_size">16sp</dimen>
+    <dimen name="unlock_wall_dialog_features_padding_trb">4dp</dimen>
+    <dimen name="unlock_wall_features_text_size">15sp</dimen>
+    <dimen name="unlock_wall_dialog_option_padding_b">4dp</dimen>
+    <dimen name="unlock_wall_dialog_divider_height">1dp</dimen>
+    <dimen name="unlock_wall_dialog_divider_width">130dp</dimen>
+    <dimen name="unlock_wall_dialog_divider_padding_tb">4dp</dimen>
+    <dimen name="fallback_layout_text_size">18sp</dimen>
+    <dimen name="fallback_layout_button_margin_t">10dp</dimen>
+    <!--wall item container-->
+    <dimen name="wall_label_margin_tr">5dp</dimen>
+    <dimen name="wall_label_padding">4dp</dimen>
+    <dimen name="wall_label_radius">5dp</dimen>
+    <dimen name="wall_label_text_size">12sp</dimen>
+</resources>

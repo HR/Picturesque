@@ -1,0 +1,77 @@
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<resources>
+    <!-- Splash screen -->
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorPrimaryDark">@color/primary</item>
+        <item name="android:colorBackground">@color/primary</item>
+    </style>
+
+    <!-- Main application theme -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="preferenceTheme">@style/Preferences</item>
+        <item name="android:colorBackground">@color/secondary</item>
+        <item name="android:windowBackground">@color/primary</item>
+        <item name="searchViewStyle">@style/SearchBar</item>
+    </style>
+
+    <style name="AppTheme.dialog.alert" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">@color/accent</item>
+        <item name="android:colorBackground">@color/primary</item>
+        <item name="android:windowBackground">@color/primary</item>
+    </style>
+
+    <style name="Preferences" parent="AppTheme">
+        <item name="android:divider">?android:dividerHorizontal</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme.Base">
+        <item name="android:alertDialogStyle">@style/AppTheme.dialog.alert</item>
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="AppTheme"/>
+
+    <style name="AppTheme.PopupOverlay" parent="AppTheme"/>
+
+    <style name="Divider">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="SearchBar" parent="Widget.AppCompat.SearchView">
+        <!-- Background for the search query section (e.g. EditText) -->
+        <item name="queryBackground">@color/primary</item>
+        <!-- Background for the actions section (e.g. voice, submit) -->
+        <item name="submitBackground">@null</item>
+        <!--hint icon-->
+        <item name="searchHintIcon">@null</item>
+        <!-- Go/commit button icon -->
+        <item name="goIcon">@null</item>
+        <!-- Voice search button icon -->
+        <item name="voiceIcon">@null</item>
+        <!-- Commit icon shown in the query suggestion row -->
+        <item name="commitIcon">@null</item>
+        <!-- Layout for query suggestion rows -->
+        <item name="suggestionRowLayout">@null</item>
+    </style>
+</resources>

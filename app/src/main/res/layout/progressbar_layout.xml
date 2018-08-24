@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/fl_loading_indicator"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/primary"
+             android:visibility="gone">
+
+    <include
+        layout="@layout/progressbar_default"
+        android:visibility="visible"/>
+</FrameLayout>

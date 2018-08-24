@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO: Use styles here to clean this up -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:id="@+id/cl_unlock_wall_dialog"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content"
+                                                 android:paddingBottom="@dimen/md_dialog_content_padding"
+                                                 android:paddingLeft="@dimen/md_dialog_content_padding"
+                                                 android:paddingRight="@dimen/md_dialog_content_padding"
+                                                 android:paddingTop="@dimen/md_dialog_content_padding_top">
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_dialog_unlock_wall"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_option_pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/unlock_wall_dialog_option_padding_b"
+            android:text="@string/heading_dialog_unlock_wall_option_pro"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/accent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_description"/>
+
+        <ImageView
+            android:id="@+id/iv_pro_feature1_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/unlock_wall_dialog_features_padding_trb"
+            android:paddingRight="@dimen/unlock_wall_dialog_features_padding_trb"
+            android:paddingTop="@dimen/unlock_wall_dialog_features_padding_trb"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_option_pro"
+            app:srcCompat="@drawable/ic_check"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_dialog_unlock_wall_pro_feature2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="@dimen/unlock_wall_features_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/iv_pro_feature1_check"
+            app:layout_constraintLeft_toRightOf="@id/iv_pro_feature1_check"
+            app:layout_constraintTop_toTopOf="@id/iv_pro_feature1_check"/>
+
+        <ImageView
+            android:id="@+id/iv_pro_feature2_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/unlock_wall_dialog_features_padding_trb"
+            android:paddingRight="@dimen/unlock_wall_dialog_features_padding_trb"
+            android:paddingTop="@dimen/unlock_wall_dialog_features_padding_trb"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_pro_feature1_check"
+            app:srcCompat="@drawable/ic_check"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_dialog_unlock_wall_pro_feature3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="@dimen/unlock_wall_features_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/iv_pro_feature2_check"
+            app:layout_constraintLeft_toRightOf="@id/iv_pro_feature2_check"
+            app:layout_constraintTop_toTopOf="@id/iv_pro_feature2_check"/>
+
+        <ImageView
+            android:id="@+id/iv_pro_feature3_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/unlock_wall_dialog_features_padding_trb"
+            android:paddingRight="@dimen/unlock_wall_dialog_features_padding_trb"
+            android:paddingTop="@dimen/unlock_wall_dialog_features_padding_trb"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_pro_feature2_check"
+            app:srcCompat="@drawable/ic_check"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_dialog_unlock_wall_pro_feature1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="@dimen/unlock_wall_features_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/iv_pro_feature3_check"
+            app:layout_constraintLeft_toRightOf="@id/iv_pro_feature3_check"
+            app:layout_constraintTop_toTopOf="@id/iv_pro_feature3_check"/>
+
+        <TextView
+            android:id="@+id/tv_divider_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/unlock_wall_dialog_divider_padding_tb"
+            android:paddingTop="@dimen/unlock_wall_dialog_divider_padding_tb"
+            android:text="@string/heading_dialog_unlock_wall_or"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/accent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_pro_feature3_check"/>
+
+        <View
+            android:id="@+id/v_start_divider"
+            android:layout_width="@dimen/unlock_wall_dialog_divider_width"
+            android:layout_height="@dimen/unlock_wall_dialog_divider_height"
+            android:background="@color/unlock_wall_dialog_divider"
+            app:layout_constraintBottom_toBottomOf="@id/tv_divider_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_divider_text"
+            />
+
+        <View
+            android:id="@+id/v_end_divider"
+            android:layout_width="@dimen/unlock_wall_dialog_divider_width"
+            android:layout_height="@dimen/unlock_wall_dialog_divider_height"
+            android:background="@color/unlock_wall_dialog_divider"
+            app:layout_constraintBottom_toBottomOf="@id/tv_divider_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_divider_text"
+            />
+
+        <TextView
+            android:id="@+id/tv_option_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/unlock_wall_dialog_option_padding_b"
+            android:text="@string/heading_dialog_unlock_wall_option_free"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/accent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_divider_text"/>
+
+        <ImageView
+            android:id="@+id/iv_free_feature1_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/unlock_wall_dialog_features_padding_trb"
+            android:paddingRight="@dimen/unlock_wall_dialog_features_padding_trb"
+            android:paddingTop="@dimen/unlock_wall_dialog_features_padding_trb"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_option_free"
+            app:srcCompat="@drawable/ic_check"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_dialog_unlock_wall_free_feature1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="@dimen/unlock_wall_features_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/iv_free_feature1_check"
+            app:layout_constraintLeft_toRightOf="@id/iv_free_feature1_check"
+            app:layout_constraintTop_toTopOf="@id/iv_free_feature1_check"/>
+
+        <ImageView
+            android:id="@+id/iv_free_feature2_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/unlock_wall_dialog_features_padding_trb"
+            android:paddingRight="@dimen/unlock_wall_dialog_features_padding_trb"
+            android:paddingTop="@dimen/unlock_wall_dialog_features_padding_trb"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_free_feature1_check"
+            app:srcCompat="@drawable/ic_close"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_dialog_unlock_wall_free_feature2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="@dimen/unlock_wall_features_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/iv_free_feature2_check"
+            app:layout_constraintLeft_toRightOf="@id/iv_free_feature2_check"
+            app:layout_constraintTop_toTopOf="@id/iv_free_feature2_check"/>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

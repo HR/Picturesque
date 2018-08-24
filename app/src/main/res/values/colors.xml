@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<resources>
+    <!-- Elementary -->
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- material design grays -->
+    <color name="md_grey_50">#FAFAFA</color>
+    <color name="md_grey_100">#F5F5F5</color>
+    <color name="md_grey_200">#EEEEEE</color>
+    <color name="md_grey_300">#E0E0E0</color>
+    <color name="md_grey_400">#BDBDBD</color>
+    <color name="md_grey_500">#9E9E9E</color>
+    <color name="md_grey_600">#757575</color>
+    <color name="md_grey_700">#616161</color>
+    <color name="md_grey_800">#424242</color>
+    <color name="md_grey_900">#212121</color>
+    <color name="md_black_1000">#000000</color>
+    <color name="md_white_1000">#ffffff</color>
+
+    <!-- Theme -->
+    <color name="primary">@color/black</color>
+    <color name="secondary">@color/md_grey_900</color>
+    <color name="accent">@color/white</color>
+    <color name="unselected">#757575</color>
+    <color name="shortcut_base">@color/md_grey_100</color>
+
+    <color name="temp_background">@color/md_grey_900</color>
+    <color name="wall_label">#55000000</color>
+    <!-- vignette_color = rgba(0, 0, 0, 0.6) -->
+    <color name="vignette_overlay">#99000000</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="unlock_wall_dialog_ic">@color/md_grey_300</color>
+    <color name="unlock_wall_dialog_divider">@color/md_grey_700</color>
+
+</resources>

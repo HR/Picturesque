@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/v_ad"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginBottom="@dimen/wall_grid_margin"
+             android:layout_marginTop="@dimen/wall_grid_margin"
+             android:clickable="true"
+             android:foreground="?attr/selectableItemBackground"
+             android:gravity="center">
+</FrameLayout>

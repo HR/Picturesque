@@ -1,0 +1,13 @@
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<vector android:height="24dp"
+        android:width="24dp"
+        android:viewportHeight="48.0"
+        android:viewportWidth="48.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#DDDDDD" android:pathData="M37.8,15.9m-3.8,0a3.8,3.8 0,1 1,7.6 0a3.8,3.8 0,1 1,-7.6 0"/>
+    <path android:fillColor="#464646" android:pathData="M19,15.9l-13.8,20l27.6,0z"/>
+    <path android:fillColor="#5A5A5A" android:pathData="M32.8,23.4l-10.1,12.5l20.1,0z"/>
+</vector>

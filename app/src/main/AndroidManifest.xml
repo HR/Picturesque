@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="co.sahr.android.picturesque">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+
+    <application
+        android:name="co.sahr.android.picturesque.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--MainActivity-->
+        <activity
+            android:name="co.sahr.android.picturesque.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SET_WALLPAPER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <!-- App shortcuts -->
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+
+            <!-- Searchable -->
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+
+        <!--SettingsActivity-->
+        <activity
+            android:name="co.sahr.android.picturesque.SettingsActivity"
+            android:label="@string/title_activity_settings">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.sahr.android.picturesque.MainActivity"/>
+        </activity>
+
+        <!--WallActivity-->
+        <activity
+            android:name="co.sahr.android.picturesque.WallActivity"
+            android:label="@string/title_activity_wall"
+            android:launchMode="singleTop"
+            android:parentActivityName="co.sahr.android.picturesque.MainActivity"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.sahr.android.picturesque.MainActivity"/>
+        </activity>
+
+        <!--TagActivity-->
+        <activity
+            android:name="co.sahr.android.picturesque.TagActivity"
+            android:label="@string/title_activity_tag"
+            android:launchMode="singleTop"
+            android:parentActivityName="co.sahr.android.picturesque.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.sahr.android.picturesque.MainActivity"/>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,22 @@
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="24dp"
+        android:height="24dp"
+        android:viewportWidth="24.0"
+        android:viewportHeight="24.0">
+    <path
+        android:fillColor="@color/accent"
+        android:pathData="M3,2h7c0.6,0 1,0.4 1,1v7c0,0.6 -0.4,1 -1,1h-7c-0.6,0 -1,-0.4 -1,-1L2,3C2,2.4 2.4,2 3,2z"/>
+    <path
+        android:fillColor="@color/accent"
+        android:pathData="M14,2h7c0.6,0 1,0.4 1,1v7c0,0.6 -0.4,1 -1,1h-7c-0.6,0 -1,-0.4 -1,-1L13,3C13,2.4 13.4,2 14,2z"/>
+    <path
+        android:fillColor="@color/accent"
+        android:pathData="M3,13h7c0.6,0 1,0.4 1,1v7c0,0.6 -0.4,1 -1,1h-7c-0.6,0 -1,-0.4 -1,-1L2,14C2,13.4 2.4,13 3,13z"/>
+    <path
+        android:fillColor="@color/accent"
+        android:pathData="M14,13h7c0.6,0 1,0.4 1,1v7c0,0.6 -0.4,1 -1,1h-7c-0.6,0 -1,-0.4 -1,-1L13,14C13,13.4 13.4,13 14,13z"/>
+</vector>

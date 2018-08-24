@@ -1,0 +1,16 @@
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/ic_shortcut_base"
+        android:maxLevel="0" />
+    <item
+        android:top="@dimen/shortcut_ic_padding"
+        android:bottom="@dimen/shortcut_ic_padding"
+        android:left="@dimen/shortcut_ic_padding"
+        android:right="@dimen/shortcut_ic_padding"
+        android:drawable="@drawable/ic_liked_primary"
+        android:maxLevel="1" />
+</layer-list>

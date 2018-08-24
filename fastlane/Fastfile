@@ -1,0 +1,169 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version '2.102.0'
+
+default_platform :android
+
+
+vf = "#{File.dirname(Dir.pwd)}/build.gradle"
+
+platform :android do
+  before_all do
+    # Perform a clean build
+    gradle(task: 'clean')
+  end
+
+  desc 'Runs all the tests'
+  lane :test do
+    gradle(task: 'test')
+  end
+
+  desc 'Bump the release version code'
+  lane :bump_code do |_options|
+    # Bump release version code
+    bump_version(
+      version_file: vf,
+      version_regex: /releaseVersionCode/,
+      version_increment: 1
+    )
+  end
+
+  desc 'Bump the release version name'
+  lane :bump_name do |_options|
+    # Bump release version name
+    bump_version(
+      version_file: vf,
+      version_regex: /releaseVersionName/,
+      version_increment: 0.1
+    )
+  end
+
+  desc 'Git tag the release after bumping version (name & code)'
+  lane :bump_tag do |_options|
+    # Bump release versions
+    bump_name
+    bumped_name = lane_context[SharedValues::BUMPED_VERSION]
+    bump_code
+    bumped_code = lane_context[SharedValues::BUMPED_VERSION]
+
+    # Create tag name via format: v{ReleaseVersionName}-{ReleaseVersionCode}
+    tag_name = "v#{bumped_name}-#{bumped_code}"
+    puts("Tag name: #{tag_name}")
+
+    # Add tag name
+    add_git_tag(
+      tag: tag_name
+    )
+
+    # Push tag to remote
+    # push_to_git_remote(
+    #   tags: true # optional, default: true
+    # )
+  end
+
+  desc 'Deploy a new version to the Google Play - Alpha channel'
+  lane :alpha do |_options|
+    # bump version and tag release
+    bump_tag
+
+    # Build, sign & zipalign
+    gradle(task: 'assembleReleaseUnoptimized')
+
+    # Create changelog from commits
+    # changelog_from_git_commits(
+    #   between: ['HEAD~5', 'HEAD']
+    # )
+
+    # TODO: Changelog
+
+    supply(
+      track: 'alpha',
+      apk: lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH].to_s,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+    # TODO: git push tag
+  end
+
+  desc 'Deploy a new version to the Google Play - Beta channel'
+  lane :beta do
+    # bump version and tag release
+    bump_tag
+    # Sign, zipalign, max optimize & obsuficate
+    # Build, sign & zipalign
+    gradle(task: 'assembleReleaseUnoptimized')
+
+    # Create changelog from commits
+    # changelog_from_git_commits(
+    #   between: ['HEAD~5', 'HEAD']
+    # )
+
+    # TODO: Changelog
+
+    supply(
+      track: 'beta',
+      apk: lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH].to_s,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+
+  desc 'Deploy a new version to the Google Play - Release channel'
+  lane :release do
+    # bump version and tag release
+    bump_tag
+    # Sign, zipalign, max optimize & obsuficate
+    # Build, sign & zipalign
+    gradle(task: 'assembleReleaseUnoptimized')
+
+    # Create changelog from commits
+    # changelog_from_git_commits(
+    #   between: ['HEAD~5', 'HEAD']
+    # )
+
+    # TODO: Changelog
+
+    supply(
+      apk: lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH].to_s,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+
+  # You can define as many lanes as you want
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used. No personal data is recorded.
+# Learn more at https://github.com/fastlane/fastlane#metrics

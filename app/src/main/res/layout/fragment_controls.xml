@@ -1,0 +1,64 @@
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="co.sahr.android.picturesque.fragments.wall.ControlsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wall_vignette_size"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/bottom_vignette"
+        android:gravity="center|bottom"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:layout_width="@dimen/control_ic_size"
+            android:layout_height="@dimen/control_ic_size"
+            android:layout_marginBottom="@dimen/control_ic_margin_bottom"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:onClick="saveWall"
+            app:srcCompat="@drawable/ic_file_download"/>
+
+        <ImageView
+            android:layout_width="@dimen/control_ic_size"
+            android:layout_height="@dimen/control_ic_size"
+            android:layout_marginBottom="@dimen/control_ic_margin_bottom"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:onClick="setWall"
+            app:srcCompat="@drawable/ic_wallpaper"/>
+
+        <ImageView
+            android:id="@+id/iv_like_control"
+            android:layout_width="@dimen/control_ic_size"
+            android:layout_height="@dimen/control_ic_size"
+            android:layout_marginBottom="@dimen/control_ic_margin_bottom"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:onClick="toggleWallLike"
+            app:srcCompat="@drawable/ic_like"/>
+
+        <ImageView
+            android:id="@+id/iv_info_control"
+            android:layout_width="@dimen/control_ic_size"
+            android:layout_height="@dimen/control_ic_size"
+            android:layout_marginBottom="@dimen/control_ic_margin_bottom"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:onClick="toggleWallInfo"
+            app:srcCompat="@drawable/ic_info"/>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<PreferenceCategory-->
+    <!--android:title="@string/title_pref_notifications"-->
+    <!--android:key="@string/pref_notifications_key">-->
+    <!--<CheckBoxPreference-->
+    <!--android:defaultValue="@bool/pref_clear_cache_default"-->
+    <!--android:key="@string/pref_wallofday_key"-->
+    <!--android:summary="@string/description_pref_wallofday"-->
+    <!--android:title="@string/title_pref_wallofday"/>-->
+    <!--</PreferenceCategory>-->
+    <PreferenceCategory
+        android:title="@string/title_pref_general">
+        <Preference
+            android:key="@string/pref_clear_cache_key"
+            android:summary="@string/description_pref_clear_cache"
+            android:title="@string/title_pref_clear_cache"/>
+        <Preference
+            android:key="@string/pref_app_faq_key"
+            android:summary="@string/description_pref_faq"
+            android:title="@string/title_pref_faq">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/app_faq_link">
+            </intent>
+        </Preference>
+        <Preference
+            android:key="@string/pref_app_share_key"
+            android:summary="@string/description_pref_share"
+            android:title="@string/title_pref_share"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/app_name">
+        <Preference
+            android:key="@string/pref_version_key"
+            android:title="@string/title_pref_version">
+        </Preference>
+        <Preference
+            android:key="@string/pref_send_feedback_key"
+            android:summary="@string/description_pref_send_feedback"
+            android:title="@string/title_pref_send_feedback">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/uri_email_pref_feedback">
+                <extra
+                    android:name="android.intent.extra.SUBJECT"
+                    android:value="@string/feedback_email_subject"/>
+            </intent>
+        </Preference>
+        <Preference
+            android:key="@string/pref_credits_key"
+            android:summary="@string/description_pref_legal"
+            android:title="@string/title_pref_legal">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/app_legal_link">
+            </intent>
+        </Preference>
+
+    </PreferenceCategory>
+</PreferenceScreen>

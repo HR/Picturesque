@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+            android:opacity="opaque">
+    <item android:drawable="@color/primary"/>
+    <item
+        android:gravity="center">
+        <bitmap android:src="@drawable/emblem"
+                android:gravity="center" />
+    </item>
+</layer-list>

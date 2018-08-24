@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) Habib Rehman (git.io/HR) 2018
+  -->
+
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_home_shortcut"
+        android:shortcutDisabledMessage="@string/title_tab_home"
+        android:shortcutId="home"
+        android:shortcutLongLabel="@string/title_tab_home"
+        android:shortcutShortLabel="@string/title_tab_home">
+        <intent
+            android:action="co.sahr.android.picturesque.go.home"
+            android:targetClass="co.sahr.android.picturesque.MainActivity"
+            android:targetPackage="co.sahr.android.picturesque" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_premium_shortcut"
+        android:shortcutDisabledMessage="@string/shortcut_go_pro"
+        android:shortcutId="premium"
+        android:shortcutLongLabel="@string/title_tab_premium"
+        android:shortcutShortLabel="@string/title_tab_premium">
+        <intent
+            android:action="co.sahr.android.picturesque.go.premium"
+            android:targetClass="co.sahr.android.picturesque.MainActivity"
+            android:targetPackage="co.sahr.android.picturesque" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_tags_shortcut"
+        android:shortcutDisabledMessage="@string/title_tab_tags"
+        android:shortcutId="categories"
+        android:shortcutLongLabel="@string/title_tab_tags"
+        android:shortcutShortLabel="@string/title_tab_tags">
+        <intent
+            android:action="co.sahr.android.picturesque.go.tags"
+            android:targetClass="co.sahr.android.picturesque.MainActivity"
+            android:targetPackage="co.sahr.android.picturesque" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_liked_shortcut"
+        android:shortcutDisabledMessage="@string/title_tab_likes"
+        android:shortcutId="likes"
+        android:shortcutLongLabel="@string/title_tab_likes"
+        android:shortcutShortLabel="@string/title_tab_likes">
+        <intent
+            android:action="co.sahr.android.picturesque.go.liked"
+            android:targetClass="co.sahr.android.picturesque.MainActivity"
+            android:targetPackage="co.sahr.android.picturesque" />
+    </shortcut>
+</shortcuts>
