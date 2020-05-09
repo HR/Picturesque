@@ -9,19 +9,11 @@
 
 
 <h4 align="center">An elegant, minimal and feature-rich wallpaper app.</h4>
-<p align="center">
-    <a href="https://play.google.com/store/apps/details?id=co.sahr.android.picturesque">
-        <img src="https://cdn.rawgit.com/steverichey/google-play-badge-svg/266d2b2d/img/en_get.svg"
-            alt="Get it on the Google Play Store" style= "margin-bottom: 0.5rem" height="60rem">
-    </a>
-</p>
 <br>
 
 ![preview](https://sahr.co/img/picturesque_screenshots_perspective.png)
 
 ### More info at https://sahr.co/picturesque
-
-Please consider purchasing the _Pro_ version of the app if this helps or you like it!
 
 
 ### License
