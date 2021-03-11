@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://sahr.co/picturesque"><img src="https://sahr.co/img/Picturesque_App_Icon.png" alt="Picturesque" width="150" style= "margin-bottom: 1rem"></a>
+  <a href="https://habibrehman.com/work/picturesque"><img src="https://user-images.githubusercontent.com/4217124/110836994-a46a4580-8298-11eb-8d28-c8cc30a82e8d.png" alt="Picturesque" width="150" style= "margin-bottom: 1rem"></a>
   <br>
   Picturesque
   <br>
@@ -11,9 +11,9 @@
 <h4 align="center">An elegant, minimal and feature-rich wallpaper app.</h4>
 <br>
 
-![preview](https://sahr.co/img/picturesque_screenshots_perspective.png)
+![preview](https://user-images.githubusercontent.com/4217124/110837118-c237aa80-8298-11eb-9b16-4d865f06b1be.png)
 
-### More info at https://sahr.co/picturesque
+### More info at https://habibrehman.com/work/picturesque
 
 
 ### License
